@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
 
 const Layout = ({ data }) => {
@@ -18,7 +18,7 @@ const Layout = ({ data }) => {
         const { frontmatter } = edge.node
         return (
           <div style={{ marginBottom: "1rem" }} key={frontmatter.path}>
-            {frontmatter.title}
+            <Link to={frontmatter.path}>{frontmatter.title}</Link>
           </div>
         )
       })}
@@ -28,7 +28,7 @@ const Layout = ({ data }) => {
 
 export const query = graphql`
   query HomepageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
