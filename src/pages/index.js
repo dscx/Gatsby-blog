@@ -22,6 +22,9 @@ const Layout = ({ data }) => {
           </div>
         )
       })}
+      <div style={{ marginBottom: "1rem" }}>
+        <Link to={"/tags"}>Browse Tags</Link>
+      </div>
     </div>
   )
 }
