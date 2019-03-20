@@ -1,4 +1,5 @@
 # Sample blog using gatsby and templating
+  This is a sample bloogin platform using Gatsby (React & GraphQL) and markdown
 
 ## Setup
 
@@ -20,4 +21,5 @@ $ yarn
 $ gatsby develop
 ```
 
-> [http://localhost:8000](http://localhost:8000)
+> [http://localhost:8000](http://localhost:8000) - Client
+> [http://localhost:8000/___graphql](http://localhost:8000/___graphql) - GraphiQL
